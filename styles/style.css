@@ -310,10 +310,11 @@ ol {
   cursor: pointer;
 }
 
-input[type='checkbox']:checked + span {
-  outline: 1px solid #000;
-  outline-offset: -2px;
-  background-color: #fff;
+input[type="checkbox"]:checked + span.search-form__pseudo-checkbox::after  {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: #fff;
 }
 
 .button {
