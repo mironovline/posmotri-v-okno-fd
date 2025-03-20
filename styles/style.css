@@ -12,13 +12,13 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -42,10 +42,10 @@ ol {
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }
@@ -67,24 +67,23 @@ ol {
 .content {
   display: grid;
   grid: 534px / 711px 399px;
-  gap: 30px;
   grid-template-areas: 'result content__details';
   justify-items: center;
   align-items: end;
+  gap: 30px;
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
-  height: 54px;
   align-items: flex-end;
+  gap: 30px;
 }
 
 .result {
-  grid-area: result;
   display: flex;
   flex-direction: column;
+  grid-area: result;
   justify-content: center;
 }
 
@@ -92,7 +91,7 @@ ol {
   position: relative;
   display: flex;
   flex-direction: column;
-  max-height: 534px;
+
   overflow: auto;
 }
 
@@ -104,9 +103,9 @@ ol {
 
 .content__card-link {
   display: block;
+  padding: 2px;
   color: #fff;
   text-decoration: none;
-  padding: 2px;
 }
 
 .content__card-link:focus {
@@ -119,19 +118,20 @@ ol {
 }
 
 .content__card-link:hover {
-  text-decoration: underline;
   color: #fff;
-  cursor: pointer;
+  text-decoration: underline;
   text-decoration-skip-ink: none;
+  cursor: pointer;
 }
 
 .content__card-link:active {
-  background-color: #545050;
   text-decoration: none;
+  background-color: #545050;
 }
 
 .content__card-link_current {
   text-decoration-skip-ink: none;
+  background-color: #545050;
 }
 
 .content__card-link_current:active {
@@ -151,12 +151,12 @@ ol {
 }
 
 .content__details {
-  grid-area: content__details;
-  align-self: end;
   display: flex;
-  gap: 26px;
   flex-direction: column;
+  grid-area: content__details;
   justify-content: center;
+  gap: 26px;
+  align-self: end;
   width: 100%;
   height: 100%;
 }
@@ -169,54 +169,54 @@ ol {
 }
 
 .content__video-card-title {
+  width: 192px;
+  overflow: hidden;
+  color: #fff;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
-  color: #fff;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
-  width: 192px;
-  height: 30px;
 }
 
 .content__video-card-thumbnail {
-  height: 103px;
   width: 194px;
+  height: 103px;
   object-fit: cover;
   object-position: center;
 }
 
 .content__video-card-description-container {
   display: flex;
-  align-self: flex-start;
   flex-direction: column;
-  gap: 6px;
   flex-grow: 1;
+  gap: 6px;
+  align-self: flex-start;
 }
 
 .content__video-card-description {
+  display: -webkit-box;
+  overflow: hidden;
+  color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 90%;
-  color: #fff;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
 
 .result__video {
-  object-fit: cover;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .title {
-  height: 210px;
+  margin-bottom: auto;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
@@ -236,8 +236,8 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  border-style: none;
   width: fit-content;
+  border-style: none;
 }
 
 .search-form__fieldset:focus {
@@ -250,24 +250,24 @@ ol {
 }
 
 .search-form__fieldset-title {
+  color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  color: #fff;
 }
 
 .search-form__textfield {
+  width: 225px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid transparent;
+  outline: none;
+  color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  color: #fff;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-right: 1px solid transparent;
-  border-left: 1px solid transparent;
   background-color: transparent;
-  width: 225px;
-  outline: none;
 }
 
 .search-form__textfield:active {
@@ -280,9 +280,9 @@ ol {
 }
 
 .search-form__checkbox-list {
-  width: 212px;
   display: flex;
   justify-content: space-between;
+  width: 212px;
 }
 
 .search-form__label {
@@ -302,15 +302,15 @@ ol {
 
 .search-form__pseudo-checkbox {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
   cursor: pointer;
 }
 
-input[type="checkbox"]:checked + span.search-form__pseudo-checkbox::after  {
+input[type='checkbox']:checked + span.search-form__pseudo-checkbox::after {
   content: '';
   width: 15px;
   height: 15px;
@@ -323,16 +323,17 @@ input[type="checkbox"]:checked + span.search-form__pseudo-checkbox::after  {
   align-items: center;
   height: 34px;
   border: 1px solid #fff;
-  background-color: transparent;
   color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  background-color: transparent;
   cursor: pointer;
 }
 
 .button:hover {
-  text-decoration: underline;
   color: #fff;
-  cursor: pointer;
+  text-decoration: underline;
   text-decoration-skip-ink: none;
+  cursor: pointer;
 }
 
 .button:active {
@@ -349,20 +350,19 @@ input[type="checkbox"]:checked + span.search-form__pseudo-checkbox::after  {
 }
 
 .more-button {
+  margin: 30px 2px 2px;
+  padding: 6px 4px;
   font-weight: 700;
   font-size: 18px;
-  padding: 6px 4px;
-  margin: 2px;
 }
 
 .search-form__submit-button {
-  font-family: 'Fira Sans Condensed', sans-serif;
-  border: 1px solid #fff;
   width: 194px;
-  height: 34px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-align: center;
-  color: #fff;
   background-color: transparent;
 }
